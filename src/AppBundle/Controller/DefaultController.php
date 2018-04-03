@@ -15,7 +15,7 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $points = $this->getDoctrine()->getRepository(Node::class)->findAll();
+        $points = $this->getDoctrine()->getRepository(Point\Poi::class)->findAll();
 
         // replace this example code with whatever you need
         return $this->render('@App/index.html.twig', ['points'=>$points]);
